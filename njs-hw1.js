@@ -1,4 +1,4 @@
-//подключаем API для работы со стандартными потоками ввода/вывода
+//подключаем API? для работы со стандартными потоками ввода/вывода
 const readline = require ('readline');
 const rl = readline.createInterface({
     input: process.stdin,
@@ -25,12 +25,12 @@ rl.question("Creating new directory.\nEnter path for new directory ", (answer) =
     {
         mkdirp( path, function (err) {
             if (err) console.error(err)
-            else console.log('Директория '+clc.green(path)+' успешно создана.')
+            else console.log('Directory '+clc.green(path)+' successfully created.')
         });
     }
     else {
-        console.log(clc.yellow('Укажите путь для создания директории.'));
-        process.stdout.write('\x07');
+        console.log(clc.yellow('Need path for create directory.'));
+        process.stdout.write('\u0007');
         // beep();
     }
 rl.close();
